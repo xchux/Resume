@@ -1,4 +1,4 @@
-#Simon Chu
+# Simon Chu
 
 Taiwan
 * Web Resume (https://xchux.github.io/Resume/)
