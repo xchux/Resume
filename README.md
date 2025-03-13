@@ -2,6 +2,5 @@
 
 Taiwan
 * Web Resume (https://xchux.github.io/Resume/)
-* Email (chicochu9333@gmail.com)
-* LinkedIn (https://www.linkedin.com/in/heng-ching-chu-a31833177)
+* LinkedIn (https://www.linkedin.com/in/simon-chu-tw)
 * Medium (https://chu-chu.medium.com/)
