@@ -47,8 +47,8 @@ const Navbar = (transation: translatoinSchemaType) => {
                             </button>
                             {isLangOpen && (
                                 <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg dark:bg-neutral-900 dark:border-neutral-700">
-                                    <Link className="block px-4 py-2 text-gray-800 hover:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-700" href="/en">English</Link>
-                                    <Link className="block px-4 py-2 text-gray-800 hover:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-700" href="/zh-TW">中文</Link>
+                                    <Link className="block px-4 py-2 text-gray-800 hover:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-700" href="https://xchux.github.io/Resume/en">English</Link>
+                                    <Link className="block px-4 py-2 text-gray-800 hover:bg-gray-200 dark:text-neutral-200 dark:hover:bg-neutral-700" href="https://xchux.github.io/Resume/zh-TW">中文</Link>
                                 </div>
                             )}
                         </div>
