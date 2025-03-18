@@ -405,7 +405,7 @@ const renderAward = ({ item }: { item: awardsSchemaType }) => {
         {item.title}
       </h2>
       {item.projects.map((project: awardProjectSchemaType, idx: number) => (
-        <div key={idx} className="bg-sky-100 p-6 rounded-lg shadow-sm">
+        <div key={idx} className="p-6 rounded-lg shadow-sm">
           <h2 className="text-base font-semibold">{project.name}</h2>
           <ul className="mt-3 space-y-1">
             {project.competitions.map((competition: awardProjectCompetitionSchemaType, index: number) => (
