@@ -30,13 +30,13 @@
         "position": "Backend Engineer",
         "duration": "2022/06 - 2024/12",
         "descriptions": [
-          "Developed a digital product sales system using AWS Lambda within the free tier to handle file uploads, validation, and antivirus scanning, reducing server load and costs. Implemented a scheduling mechanism to automatically revoke download permissions for expired files.",
-          "Managed product specification images by developing a feature to associate product specifications with corresponding images. Utilized context managers and Celery for asynchronous image cropping, improving thumbnail processing efficiency, and accelerated client-side loading via CDN.",
-          "Optimized response rate calculation by collaborating with data engineers to define calculation formulas. Enhanced daily site-wide seller response rate computations through database indexing and data preprocessing.",
+          "Developed a digital product sales system, enhanced file security through AWS Lambda and Antivirus, set up a cronjob to manage order files, and built a development environment and CI/CD process to improve system maintainability, which stably process thousands of orders every month.",
+          "Develop product variation and image corresponding functions, use Celery distributed task queue and image cropping server to implement asynchronous processing, monitor Prometheus indicators through Grafana, and set up alarm mechanisms to insure execution performance and system stability.",
+          "Refactor the product listing function, use the abstract factory design pattern to decouple product types methods, improve separation of concerns (SoC), optimize the business logic independence of various products, and increase API response speed by 10%.",
           "Developed and maintained the messaging center by implementing a real-time messaging system based on Socket.io. Focused on application-layer development, resolved disconnection handling, and improved garbage collection mechanisms to enhance system stability.",
-          "Collaborated with the team to formulate annual plans and acceptance criteria, maximizing company benefits within limited resources and manpower",
-          "Assisted junior engineers with system architecture planning, technical reviews, task breakdown, and time estimation to ensure smooth development progress.",
-          "Reviewed business data charts and assisted in chart creation, ensuring data source accuracy and reliability."
+          "Collaborate with the team to formulate annual planning and acceptance standards, use agile development and OKR for goal management, maximize output with limited manpower through resource optimization and performance adjustment, and enhance the company's business growth.",
+          "Guide junior engineers in system architecture design, code review, technical decision-making and modular task disassembly, work time estimation and progress control to ensure the efficient operation of the development process and improve the team's technical level.",
+          "Establish business data analysis and visual chart design, use DBT and combine it with BI tools (AWS Athena) to help support data-driven decision-making and improve business insight and decision-making efficiency."
         ]
       },
       {
