@@ -4,6 +4,14 @@ import Link from "next/link";
 
 import { translatoinSchemaType } from "@/types/page";
 
+const scrollToSection = (id: string, offset: number = 64) => {
+    const target = document.querySelector(id);
+    if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+    }
+};
+
 const Navbar = (transation: translatoinSchemaType) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
@@ -35,9 +43,18 @@ const Navbar = (transation: translatoinSchemaType) => {
                 <div id="hs-navbar-header-floating" className={`${isOpen ? "block" : "hidden"} md:block transition-all duration-300 basis-full grow md:block`} aria-labelledby="hs-navbar-header-floating-collapse">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
                         <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200" href="#" aria-current="page">{transation.data.profile.title}</Link>
-                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#work-experience">{transation.data.workExperience.title}</Link>
-                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#education">{transation.data.education.title}</Link>
-                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" href="#skills">{transation.data.skills.title}</Link>
+                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" onClick={(e) => {
+                            e.preventDefault();
+                            scrollToSection("#work-experience");
+                        }} href="#work-experience">{transation.data.workExperience.title}</Link>
+                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" onClick={(e) => {
+                            e.preventDefault();
+                            scrollToSection("#education");
+                        }} href="#education">{transation.data.education.title}</Link>
+                        <Link className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200" onClick={(e) => {
+                            e.preventDefault();
+                            scrollToSection("#skills");
+                        }} href="#skills">{transation.data.skills.title}</Link>
                         <div className="relative">
                             <button className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200 flex items-center" onClick={() => setIsLangOpen(!isLangOpen)}>
                                 {transation.data.language.title}
