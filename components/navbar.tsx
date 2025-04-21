@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Link from "next/link";
 
@@ -15,6 +15,20 @@ const scrollToSection = (id: string, offset: number = 64) => {
 const Navbar = (transation: translatoinSchemaType) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
+    const langDropdownRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (langDropdownRef.current && !langDropdownRef.current.contains(event.target as Node)) {
+                setIsLangOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
@@ -55,7 +69,7 @@ const Navbar = (transation: translatoinSchemaType) => {
                             e.preventDefault();
                             scrollToSection("#skills");
                         }} href="#skills">{transation.data.skills.title}</Link>
-                        <div className="relative">
+                        <div className="relative" ref={langDropdownRef}>
                             <button className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200 flex items-center" onClick={() => setIsLangOpen(!isLangOpen)}>
                                 {transation.data.language.title}
                                 <svg className={`ml-1 w-4 h-4 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
