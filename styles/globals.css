@@ -19,9 +19,3 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-h2 {
-    position: relative;
-    padding-top: 5rem; /* Adjust this value to match the height of your navbar */
-    margin-top: -5rem; /* Same value as padding-top */
-}
