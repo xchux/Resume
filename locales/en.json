@@ -30,11 +30,11 @@
         "position": "Backend Engineer",
         "duration": "2022/06 - 2024/12",
         "descriptions": [
-          "Developed a digital product sales system, enhanced file security through AWS Lambda and Antivirus, set up a cronjob to manage order files, and built a development environment and CI/CD process to improve system maintainability, which stably process thousands of orders every month.",
-          "Develop product variation and image corresponding functions, use Celery distributed task queue and image cropping server to implement asynchronous processing, monitor Prometheus indicators through Grafana, and set up alarm mechanisms to insure execution performance and system stability.",
-          "Refactor the product listing function, use the abstract factory design pattern to decouple product types methods, improve separation of concerns (SoC), optimize the business logic independence of various products, and increase API response speed by 10%.",
-          "Developed and maintained the messaging center by implementing a real-time messaging system based on Socket.io. Focused on application-layer development, resolved disconnection handling, and improved garbage collection mechanisms to enhance system stability.",
-          "Collaborate with the team to formulate annual planning and acceptance standards, use agile development and OKR for goal management, maximize output with limited manpower through resource optimization and performance adjustment, and enhance the company's business growth.",
+          "Developed a digital product sales system, enhanced file security through AWS Lambda and Antivirus, connected GitHub Actions to create CI/CD automated deployment scripts, and established a scheduling control through Airflow to control the validity period of order files, enhanced deployment efficiency and system maintainability, and stably supported 10K transactions per month.",
+          "Developed a function to match product variation with images, used the Celery + RabbitMQ architecture to connect the image cropping microservice, asynchronously processed thousands of task per day, and used Prometheus + Grafana to establish real-time monitoring and alerts to ensure that each image was successfully cropped and processed within 100 ms.",
+          "Refactored the product listing module using the Abstract Factory pattern to decouple business logic among different product types. Adopted Test-Driven Development to incrementally refactor the system, resulting in a 10% improvement in API response speed and a reduced error rate in subsequent development.",
+          "Responsible for the real-time messaging system in the Message Center, focusing on application layer development based on the Socket.io framework. Improved system stability by fixing disconnection handling and garbage collection mechanisms.",
+          "Collaborated on annual product planning, assisting in defining acceptance criteria and agile development schedules based on OKRs. Acted as the representative for technical feasibility evaluations, driving AI-assisted product information enhancements and system refactoring to improve product recommendation accuracy and reduce system error rates.",
           "Guide junior engineers in system architecture design, code review, technical decision-making and modular task disassembly, work time estimation and progress control to ensure the efficient operation of the development process and improve the team's technical level.",
           "Establish business data analysis and visual chart design, use DBT and combine it with BI tools (AWS Athena) to help support data-driven decision-making and improve business insight and decision-making efficiency."
         ]
@@ -46,9 +46,9 @@
         "position": "Python Engineer",
         "duration": "2021/07 - 2022/04",
         "descriptions": [
-          "Co-develop database sharding by vertical partitioning, responsible for python script which handle proxy switch and record result when master or slave DB updating.",
+          "Co-developed database sharding (vertical partitioning) with a Master-Slave architecture to distribute read/write load. Responsible for developing Python scripts to handle routing switches and logging during primary-secondary data updates, as well as implementing a heartbeat mechanism to periodically check the status of Master and Slave nodes.",
           "Develop service center by microservice architecture and dockerize that avoide some service blocked in china.",
-          "Build unit test environment and refactor function to single responsibility which made easier for testing.",
+          "Introduced pytest for unit testing and refactored multiple functions lacking single responsibility to improve code testability and coverage (from 0% to 10%), thereby enhancing product stability.",
           "Reduce duplicate I/O and using RabbitMQ, Celery, Asyncio for speed up. E.g. distribution system speed up 30%.",
           "In charge in backend develop and design architecture. At the same time, teaching junior develop and peer code review."
         ]
