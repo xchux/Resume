@@ -84,11 +84,27 @@
     "title": "專案",
     "projects": [
       {
+        "name": "2025 NTU ML",
+        "profile": "NTU ML 2025 SPRING",
+        "duration": "2025/05 - 2025/06",
+        "descriptions": [
+          "學習機器學習與深度學習的基礎知識，並實作相關課程作業。"
+        ]
+      },
+      {
+        "name": "Google 數位人才探索計畫",
+        "profile": "Grow with Google",
+        "duration": "2025/04 - 2025/06",
+        "descriptions": [
+          "學習 Google Cloud Computing 應用與部屬與 AI 工具的使用。"
+        ]
+      },
+      {
         "name": "Python 官方文件翻譯",
         "profile": "Sciwork Project",
         "duration": "2024/05 - 2024/08",
         "descriptions": [
-          "透過 AI 工具將文件翻譯成繁體中文，且在藉由人工微調."
+          "透過 AI 工具將文件翻譯成繁體中文，且在藉由人工微調。"
         ]
       },
       {

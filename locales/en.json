@@ -84,6 +84,22 @@
     "title": "Project",
     "projects": [
       {
+        "name": "2025 NTU ML",
+        "profile": "NTU ML 2025 SPRING",
+        "duration": "2025/05 - 2025/06",
+        "descriptions": [
+          "Learn the basics of machine learning and deep learning, and perform related course assignments."
+        ]
+      },
+      {
+        "name": "Google Digital Talent Discovery Program",
+        "profile": "Grow with Google",
+        "duration": "2025/04 - 2025/06",
+        "descriptions": [
+          "Learn to use Google Cloud Computing applications and deployment and AI tools."
+        ]
+      },
+      {
         "name": "Python Docs Translation",
         "profile": "Sciwork Project",
         "duration": "2024/05 - 2024/08",
