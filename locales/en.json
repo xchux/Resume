@@ -24,6 +24,18 @@
     "title": "Work Experience",
     "companies": [
       {
+        "name": "TMYTek",
+        "icon": "tmytek",
+        "profile": "TMYTEK is the 5G mmWave total beamforming solution provider for 5G small base stations, astronomical detection, military radar and production line OTA test.",
+        "position": "Software Engineer",
+        "duration": "2025/08 - Present",
+        "descriptions": [
+          "Built a Python mmWave control suite with RF calibration, firmware updates, and stable COM/LAN/USB communication, supporting dozens of devices and widely adopted worldwide.",
+          "Clarify technical requirements with clients and rapidly develop a Proof of Concept (PoC). Define RF specifications, functional modules, and data flow. Coordinate FW/BE/FE development and integration. Verify technical feasibility and drive the formal adoption of the solution or productization.",
+          "Establish automated test scripts and measurement procedures covering communication verification, RF parameter comparison, and functional regression testing to enhance product stability and testing efficiency, and significantly reduce the cost of manual repetitive verification."
+        ]
+      },
+      {
         "name": "Pinkoi",
         "icon": "pinkoi",
         "profile": "The Company is Asia's cross-border design product shopping platform. It is committed to providing a sustainable development platform for brands of all sizes, allowing creators to safely build brand value here, grow into an international design brand, and jointly create a design ecosystem that makes life better.",
