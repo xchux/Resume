@@ -1,0 +1,6 @@
+---
+description: Pointer to the shared AI config in ai/
+alwaysApply: true
+---
+
+Read and follow `AGENTS.md` and `ai/rules/*.md`. Skills are in `ai/skills/`; MCP servers in `ai/mcp/servers.json`.

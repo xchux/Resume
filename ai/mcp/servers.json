@@ -1,0 +1,13 @@
+{
+  "$comment": "Canonical project MCP list. Run `node ai/sync.mjs` to regenerate .mcp.json, .cursor/mcp.json, .vscode/mcp.json, .codex/config.toml. No secrets here; use env vars.",
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    }
+  }
+}
