@@ -15,7 +15,9 @@
       "I am a backend engineer passionate about technological innovation and system optimization. With years of development experience, I specialize in leveraging my technical expertise to build efficient and scalable systems while focusing on enhancing system performance and optimizing development processes. I have accumulated extensive backend development experience in e-commerce, fintech, and ODM/OEM industries and excel in cross-team collaboration, task planning, and personnel management, ensuring smooth project execution and achieving expected outcomes.",
       "Beyond my work experience, I actively participate in technical communities and open-source contributions, exploring new technologies through personal development projects and continuously refining my engineering practices. I thrive on tackling challenging technical problems and driving innovative applications, aiming to apply my expertise to create superior digital experiences and generate meaningful value for society."
     ],
-    "email": "simonchu0608@gmail.com",
+    "email": "simonchu199510@gmail.com",
+    "downloadCv": "Download CV",
+    "cvFile": "cv/Simon_Chu_CV_en.docx",
     "linkedin": "https://www.linkedin.com/in/simon-chu-tw/",
     "github": "https://github.com/xchux",
     "twitter": "https://x.com/SimonCh00064398"
@@ -30,9 +32,11 @@
         "position": "Software Engineer",
         "duration": "2025/08 - Present",
         "descriptions": [
-          "Built a Python mmWave control suite with RF calibration, firmware updates, and stable COM/LAN/USB communication, supporting dozens of devices and widely adopted worldwide.",
-          "Clarify technical requirements with clients and rapidly develop a Proof of Concept (PoC). Define RF specifications, functional modules, and data flow. Coordinate FW/BE/FE development and integration. Verify technical feasibility and drive the formal adoption of the solution or productization.",
-          "Establish automated test scripts and measurement procedures covering communication verification, RF parameter comparison, and functional regression testing to enhance product stability and testing efficiency, and significantly reduce the cost of manual repetitive verification."
+          "Built a Python mmWave control suite covering RF calibration, firmware updates, and stable COM/LAN/USB communication. It supports dozens of devices and cross-platform measurement, with 10K+ downloads worldwide.",
+          "Owned projects end to end through independent work and cross-team collaboration: clarified requirements with clients, built Proof-of-Concepts quickly, defined RF specifications, functional modules, and data flow, and coordinated FW/BE/FE teams through integration to drive formal adoption or productization.",
+          "Built AI agent harnesses that parse Software Requirements Specifications and IC datasheets, then generate SCPI command specifications and backend APIs, shortening the path from documents to working interfaces.",
+          "Introduced Behavior-Driven Development for AI-agent-assisted development: behavior specs written as Given/When/Then scenarios serve as the contract that agents implement against and are verified by.",
+          "Established automated test scripts and measurement procedures covering communication verification, RF parameter comparison, and functional regression testing, improving product stability and significantly reducing manual repetitive verification."
         ]
       },
       {

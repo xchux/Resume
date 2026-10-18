@@ -2,20 +2,75 @@
 
 @import "tailwindcss";
 
+/* Sky-blue theme tokens; dark values apply via OS preference or Preline's `.dark` class. */
 :root {
-  --background: #f0f8ff;
-  --foreground: #171717;
+  --bg: #f5faff;
+  --surface: #ffffff;
+  --line: #d9e8f5;
+  --ink: #0b1b2b;
+  --muted: #52667a;
+  --accent: #0ea5e9;
+  --accent-ink: #0369a1;
+  --accent-soft: #e0f2fe;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light) {
+    --bg: #07111c;
+    --surface: #0d1b2a;
+    --line: #1e3248;
+    --ink: #e6f1fb;
+    --muted: #8ca3b8;
+    --accent: #38bdf8;
+    --accent-ink: #7dd3fc;
+    --accent-soft: rgba(56, 189, 248, 0.12);
   }
 }
 
+:root.dark {
+  --bg: #07111c;
+  --surface: #0d1b2a;
+  --line: #1e3248;
+  --ink: #e6f1fb;
+  --muted: #8ca3b8;
+  --accent: #38bdf8;
+  --accent-ink: #7dd3fc;
+  --accent-soft: rgba(56, 189, 248, 0.12);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: Calibri, 'Microsoft JhengHei', '微軟正黑體', system-ui, sans-serif;
+  --font-serif: Calibri, 'Microsoft JhengHei', '微軟正黑體', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image: radial-gradient(60rem 28rem at 50% -8%, var(--accent-soft), transparent);
+  background-repeat: no-repeat;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import en from '@/locales/en.json';
 import zh_TW from '@/locales/zh_TW.json';
 import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Navbar data={data} />
       <Component {...pageProps} data={data} />
+      <Footer />
     </>
   )
 }

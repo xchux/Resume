@@ -19,6 +19,8 @@ export const aboutSchema = z.object({
   motto: z.string(),
   autobiography: z.array(z.string()),
   email: z.string(),
+  downloadCv: z.string(),
+  cvFile: z.string(),
   linkedin: z.string(),
   github: z.string(),
   twitter: z.string(),
