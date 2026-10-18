@@ -24,6 +24,10 @@ Package manager: pnpm (a `package-lock.json` also exists; prefer `pnpm`).
 
 ## Conventions
 - Content changes go in `locales/*.json`, not in TSX. Update **both** locales together.
+- Whenever web content changes (`locales/*.json`, or layout/section changes that affect what the resume shows),
+  also regenerate the downloadable CVs: `node scripts/generate-cv.cjs` → `public/cv/*.docx`. The CV must stay
+  one page; condense per the `CONDENSE` rules in the script instead of dropping the update. Commit the
+  regenerated `.docx` files together with the content change.
 - Keep components small, typed (no `any`), styled with Tailwind utilities; support dark mode.
 - Mobile-first layouts; verify at narrow widths.
 - Reply in Traditional Chinese; code, identifiers and commit messages in English.
@@ -34,7 +38,8 @@ Package manager: pnpm (a `package-lock.json` also exists; prefer `pnpm`).
 ## Definition of done
 1. `pnpm lint` and `pnpm build` pass.
 2. Both locale files have identical key structure.
-3. No secrets or personal data beyond what is already published on the resume.
+3. If content changed, `public/cv/*.docx` was regenerated and is still one page.
+4. No secrets or personal data beyond what is already published on the resume.
 
 ## Shared AI config
 All AI settings live in `ai/`. Edit there, never in generated files; then run `node ai/sync.mjs`.
