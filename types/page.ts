@@ -1,7 +1,3 @@
-import { profile } from 'console';
-import exp from 'constants';
-import { link } from 'fs';
-import { title } from 'process';
 import { z } from 'zod';
 
 export const languageSchema = z.object({
@@ -64,29 +60,16 @@ export const educationSchema = z.object({
   schools: z.array(educationSchoolSchema),
 });
 
-export const skillFrontendSchema = z.object({
+export const skillCategorySchema = z.object({
   title: z.string(),
 });
-
-export const skillBackendSchema = z.object({
-  title: z.string(),
-});
-
-export const skillDatabSchema = z.object({
-  title: z.string(),
-});
-
-export const skillDevopsSchema = z.object({
-  title: z.string(),
-});
-
 
 export const skillsSchema = z.object({
   title: z.string(),
-  frontend: skillFrontendSchema,
-  backend: skillBackendSchema,
-  data: skillDatabSchema,
-  devOps: skillDevopsSchema,
+  frontend: skillCategorySchema,
+  backend: skillCategorySchema,
+  data: skillCategorySchema,
+  devOps: skillCategorySchema,
 });
 
 
@@ -123,7 +106,6 @@ export const translatoinSchema = z.object({
 
 export type translatoinSchemaType = z.infer<typeof translatoinSchema>;
 export type translatoinDataSchemaType = z.infer<typeof translatoinDataSchema>;
-export type languageSchemaType = z.infer<typeof languageSchema>;
 export type profileSchemaType = z.infer<typeof profileSchema>;
 export type aboutSchemaType = z.infer<typeof aboutSchema>;
 export type workExperienceSchemaType = z.infer<typeof workExperienceSchema>;
