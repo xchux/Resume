@@ -20,6 +20,7 @@ Package manager: pnpm (a `package-lock.json` also exists; prefer `pnpm`).
 - `pnpm lint` — ESLint
 - `pnpm build` — static export to `out/`
 - `pnpm deploy` — build + publish `out/` to `gh-pages` (maintainer only; never run unprompted)
+- CI: `.github/workflows/deploy.yml` lints, builds and publishes `out/` to `gh-pages` on every push to `main`
 
 ## Conventions
 - Content changes go in `locales/*.json`, not in TSX. Update **both** locales together.

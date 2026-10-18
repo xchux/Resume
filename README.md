@@ -13,58 +13,67 @@ This project is a personal resume website for Simon Chu, showcasing work experie
 
 
 ## Prerequisites
-- [Node.js](https://nodejs.org/) (v16 or newer recommended)
-- [pnpm](https://pnpm.io/) or [npm](https://www.npmjs.com/) or [yarn]
+- [Node.js](https://nodejs.org/) (v22 recommended, same as CI)
+- [pnpm](https://pnpm.io/) (v9; the lockfile is `pnpm-lock.yaml`)
 
 ## Getting Started
 
 1. **Install dependencies**
    ```bash
    pnpm install
-   # or
-   npm install
    ```
 
 2. **Run locally**
    ```bash
    pnpm dev
-   # or
-   npm run dev
    ```
    The app will be available at [http://localhost:3000](http://localhost:3000).
 
 ## Deployment
 
-This project is configured for static export and easy deployment to GitHub Pages:
+The site is a static export (`output: 'export'`, served under `/Resume`) hosted on GitHub Pages from the `gh-pages` branch.
 
-1. **Build the static site**
-   ```bash
-   pnpm build
-   # or
-   npm run build
-   ```
+### Automatic (CI/CD)
 
-2. **Export static files** (Next.js will output to the `out/` directory)
+`.github/workflows/deploy.yml` runs on every push/merge to `main` (and manually via **Actions → Run workflow**):
 
-3. **Deploy to GitHub Pages**
-   - The script `npm run deploy` will build and publish the `out/` directory to the `gh-pages` branch using `gh-pages`.
-   - Ensure your repository is set up for GitHub Pages to serve from the `/Resume` subdirectory.
+1. `pnpm install --frozen-lockfile`
+2. `pnpm lint`
+3. `pnpm build` — static files are written to `out/`
+4. Publish `out/` to the `gh-pages` branch (history is replaced by the latest build)
+
+One-time repository setup:
+- **Settings → Actions → General → Workflow permissions**: *Read and write permissions*
+- **Settings → Pages → Source**: *Deploy from a branch* → `gh-pages` / `(root)`
+
+### Manual (maintainer only)
+
+```bash
+pnpm build     # static export to out/
+pnpm deploy    # build + publish out/ to gh-pages via the gh-pages package
+```
+
+Do not edit `out/` or `.next/` by hand; they are build output.
 
 ## Tech Stack
 - [Next.js](https://nextjs.org/) (static export mode)
 - [React](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Preline UI](https://preline.co/)
+- [Preline UI](https://preline.co/) (stylesheet loaded from its CDN)
 - [TypeScript](https://www.typescriptlang.org/)
 - [next-intl](https://github.com/amannn/next-intl) (i18n)
 
 ## Directory Structure
 - `pages/` — Next.js pages (including `/en` and `/zh-TW` for language support)
 - `components/` — Navbar, Footer, and UI components
-- `locales/` — Translation files (`en.json`, `zh_TW.json`)
-- `public/` — Static assets (images, SVGs)
-- `styles/` — Global CSS (Tailwind, Preline)
-- `template/` — Main page template
+- `template/` — Main page template shared by both locales
+- `types/` — Content types and zod schema (`page.ts`)
+- `locales/` — Resume content (`en.json`, `zh_TW.json`; keys must stay identical)
+- `public/` — Static assets (images, SVGs, downloadable CVs in `cv/`)
+- `scripts/` — `generate-cv.cjs` builds `public/cv/*.docx` from `locales/*.json`
+- `styles/` — Global CSS (Tailwind 4 theme tokens, Preline)
+- `.github/workflows/` — CI/CD (deploy to GitHub Pages)
+- `ai/` — Shared AI-assistant rules, skills and MCP config
 
 ## License
 
